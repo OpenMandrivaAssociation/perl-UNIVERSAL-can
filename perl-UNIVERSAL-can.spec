@@ -17,6 +17,7 @@ BuildRequires:  perl-devel
 BuildRequires:  perl(Test::Warn)
 BuildRequires:  perl(Test::Exception)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 The UNIVERSAL class provides a few default methods so that all objects can use

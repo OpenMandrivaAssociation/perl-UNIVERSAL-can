@@ -1,16 +1,15 @@
 %define upstream_name    UNIVERSAL-can
-%define upstream_version 1.15
+%define upstream_version 1.16
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
-Release:        %mkrel 2
+Release:        %mkrel 1
 
 Summary:        Hack around calling UNIVERSAL::can() as a function
 License:        GPL+ or Artistic
 Group:          Development/Perl
 Url:            http://search.cpan.org/dist/%{upstream_name}
 Source0:        http://www.cpan.org/modules/by-module/UNIVERSAL/%{upstream_name}-%{upstream_version}.tar.gz
-Patch0:         UNIVERSAL-can-1.15-deep_recursion.patch
 
 BuildRequires:  perl(Test::Warn)
 BuildRequires:  perl(Test::Exception)
@@ -41,8 +40,6 @@ code instead.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-# fix http://rt.cpan.org/Public/Bug/Display.html?id=49580
-%patch0 -b .deep_recurse
 
 %build
 %{__perl} Build.PL installdirs=vendor

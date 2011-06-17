@@ -1,5 +1,5 @@
 %define upstream_name    UNIVERSAL-can
-%define upstream_version 1.16
+%define upstream_version 1.20110614
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
@@ -42,15 +42,15 @@ code instead.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Build.PL installdirs=vendor
-./Build
+%{__perl} Makefile.PL installdirs=vendor
+%make
 
 %check
-./Build test
+%make test
 
 %install
 rm -rf %{buildroot}
-./Build install destdir=%{buildroot}
+%makeinstall_std
 
 %clean 
 rm -rf %{buildroot}

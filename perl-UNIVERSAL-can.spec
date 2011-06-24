@@ -1,5 +1,5 @@
 %define upstream_name    UNIVERSAL-can
-%define upstream_version 1.20110614
+%define upstream_version 1.20110617
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}

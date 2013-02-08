@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Hack around calling UNIVERSAL::can() as a function
 License:	GPL+ or Artistic
@@ -27,15 +27,16 @@ functions, bypassing any possible overriding. This is wrong and you should not
 do it. Unfortunately, not everyone heeds this warning and their bad code can
 break your good code.
 
-Fortunately, this upstream_name replaces UNIVERSAL::can() with a method that checks to
+Fortunately, this upstream_name replaces UNIVERSAL::can() with a method that
+checks to
 see if the first argument is a valid invocant (whether an object -- a blessed
 referent -- or the name of a class). If so, and if the invocant's class has its
 own can() method, it calls that as a method. Otherwise, everything works as you
 might expect.
 
-If someone attempts to call UNIVERSAL::can() as a function, this upstream_name will
-emit a lexical warning (see perllexwarn) to that effect. You can disable it
-with no warnings; or no warnings 'UNIVERSAL::isa';, but don't do that; fix the
+If someone attempts to call UNIVERSAL::can() as a function, this module
+will emit a lexical warning (see perllexwarn) to that effect. You can disable
+it with no warnings; or no warnings 'UNIVERSAL::isa';, but don't do that; fix the
 code instead.
 
 %prep

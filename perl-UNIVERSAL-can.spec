@@ -36,8 +36,8 @@ might expect.
 
 If someone attempts to call UNIVERSAL::can() as a function, this module
 will emit a lexical warning (see perllexwarn) to that effect. You can disable
-it with no warnings; or no warnings 'UNIVERSAL::isa';, but don't do that; fix the
-code instead.
+it with no warnings; or no warnings 'UNIVERSAL::isa';, but don't do that; fix
+the code instead.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}

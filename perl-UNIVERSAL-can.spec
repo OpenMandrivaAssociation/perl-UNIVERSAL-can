@@ -1,13 +1,8 @@
 %define upstream_name    UNIVERSAL-can
 %define upstream_version 1.20120726
 Name:		perl-%{upstream_name}
-<<<<<<< HEAD
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
-=======
 Version:	%perl_convert_version 1.20120726
 Release:	1
->>>>>>> auto_update
 
 Summary:	Hack around calling UNIVERSAL::can() as a function
 License:	GPL+ or Artistic

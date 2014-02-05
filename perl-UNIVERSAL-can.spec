@@ -1,14 +1,14 @@
 %define upstream_name    UNIVERSAL-can
-%define upstream_version 1.20120726
+%define upstream_version 1.20140124
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.20120726
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Hack around calling UNIVERSAL::can() as a function
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/UNIVERSAL/UNIVERSAL-can-1.20120726.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/UNIVERSAL/UNIVERSAL-can-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::Warn)
@@ -124,5 +124,6 @@ perl Makefile.PL installdirs=vendor
 
 * Tue Sep 20 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.00-1mdk
 - first mdk release
+
 
 

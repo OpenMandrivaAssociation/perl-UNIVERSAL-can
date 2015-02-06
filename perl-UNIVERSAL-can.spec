@@ -2,7 +2,7 @@
 %define upstream_version 1.20140328
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Hack around calling UNIVERSAL::can() as a function
 

@@ -1,15 +1,15 @@
 %define upstream_name    UNIVERSAL-can
 %define upstream_version 1.20140328
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Hack around calling UNIVERSAL::can() as a function
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/UNIVERSAL/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/chromatic/UNIVERSAL-can
+Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/UNIVERSAL-can-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
